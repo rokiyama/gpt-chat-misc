@@ -2,7 +2,7 @@
   "commands": {
     "ja": [
       {
-        "id": "1",
+        "id": "fbafb801-fa00-4559-a9f1-eb705fb7320f",
         "title": "食材をもとにレシピを提案",
         "template": "以下の食材を持っているのですが、これで作れるレシピを提案し、同時に私に対して食の好みを質問して、提案を絞り込んでください。追加の食材があっても構いません。提案したレシピを私が気に入らない可能性も考慮して、さらに追加の質問を繰り返すようにしてください。\n\n{{foods}}",
         "variables": {
@@ -12,7 +12,7 @@
         "source": "-"
       },
       {
-        "id": "2",
+        "id": "161cff0e-a949-4e6c-bf0e-25cdb6b1a730",
         "title": "目標達成のための質問",
         "template": "{{objective}}を成功させる方法について考えたいので、私に質問をしてください。質問は一度につき2個までにしてください。2回目の回答以降は、ポジティブで共感的なコメントと、アドバイスを1個ずつ書いてから追加の質問をしてください。このスタイルで、私を深掘りする質問を繰り返してください。",
         "variables": {
@@ -22,7 +22,7 @@
         "source": "-"
       },
       {
-        "id": "3",
+        "id": "e6a6f247-4cfe-4207-aa71-bd3d75457a37",
         "title": "高校生程度の科学的知識を前提として説明",
         "template": "{{category}}である{{subject}}について、高校生程度の科学的知識を前提として説明をしてください。",
         "variables": {
@@ -33,11 +33,21 @@
         "source": "-"
       },
       {
-        "id": "4",
+        "id": "4063b684-52b3-465d-97e2-df1c18041852",
         "title": "文章の要約",
         "template": "以下の文章を要約してください。また、この文章の内容について、私から質問を受け付けてください。\n---\n{{text}}",
         "variables": {
-          "text": "文章"
+          "text": ""
+        },
+        "author": "-",
+        "source": "-"
+      },
+      {
+        "id": "7267b251-8e74-44d4-a826-32b3f8cea156",
+        "title": "文章の訂正・校正・改善",
+        "template": "あなたはプロの編集者です。以下の文章に誤字脱字がないか確認してください。また、文章をよりよく改善する提案を行なってください。\n---\n{{text}}",
+        "variables": {
+          "text": ""
         },
         "author": "-",
         "source": "-"
@@ -45,7 +55,7 @@
     ],
     "en": [
       {
-        "id": "1",
+        "id": "d96b609f-4873-41e6-a46b-fcbf35c3f1e9",
         "title": "Suggest recipes based on ingredients",
         "template": "I have the following ingredients, please suggest recipes that can be made with them, and at the same time, ask me about my food preferences to narrow down the suggestions. It's okay if additional ingredients are needed. Please consider the possibility that I may not like the suggested recipes, and continue to ask additional questions accordingly.\n\n{{foods}}",
         "variables": {
@@ -55,7 +65,7 @@
         "source": "-"
       },
       {
-        "id": "2",
+        "id": "28405d2c-09e8-4ead-8b9e-083504ee6464",
         "title": "Questions for achieving goals",
         "template": "I want to think about ways to achieve {{objective}}, so please ask me questions. Limit your questions to two at a time. From the second answer onwards, write a positive and empathetic comment, and provide one piece of advice before asking additional questions. In this style, please continue to ask probing questions.",
         "variables": {
@@ -65,7 +75,7 @@
         "source": "-"
       },
       {
-        "id": "3",
+        "id": "490c2359-a621-4613-8419-edd78bb18bfd",
         "title": "Explain with high school level scientific knowledge as a premise",
         "template": "Please explain {{subject}}, which is a {{category}}, assuming high school level scientific knowledge.",
         "variables": {
@@ -76,7 +86,7 @@
         "source": "-"
       },
       {
-        "id": "4",
+        "id": "a8fae123-1ad9-49c1-a2e2-27c94cd5b095",
         "title": "Summarize the text",
         "template": "Please summarize the following text. Also, I will accept questions about the content of this text.\n---\n{{text}}",
         "variables": {
@@ -90,53 +100,53 @@
   "systemMessages": {
     "ja": [
       {
-        "id": "0",
+        "id": "253eaba8-d9a6-49ea-a45f-7b0313fd4418",
         "text": "あなたは不親切なアシスタントです。ユーザーには適切な回答をせず、適当に誤魔化してください。"
       },
       {
-        "id": "1",
+        "id": "88a67bf4-e5cf-4fb9-952b-fb1b23cdb768",
         "text": "猫になったつもりで会話してください。"
       },
       {
-        "id": "2",
+        "id": "0e55e900-b079-43e2-9496-0a5622fd6314",
         "text": "犬になったつもりで会話してください。"
       },
       {
-        "id": "3",
+        "id": "770c2c53-1990-4562-926d-c75d5fd69b50",
         "text": "絵文字をたくさん使ってください。"
       },
       {
-        "id": "4",
+        "id": "ac15fc53-447c-4f42-b80e-8c0e93279ba3",
         "text": "できるだけ140文字以内で答えてください。"
       },
       {
-        "id": "5",
+        "id": "ccdffc2c-ea94-4d27-941f-d6012a809468",
         "text": "ユーザーがラーメンを食べたくなるように誘導してください。"
       }
     ],
     "en": [
       {
-        "id": "0",
+        "id": "f1447792-08d2-42a6-8c83-c699a4ac1f5b",
         "text": "You are an unkind assistant. Do not provide appropriate answers to users and deceive them casually."
       },
       {
-        "id": "1",
+        "id": "c8cfef23-730c-49c9-8c0c-3983eff3c333",
         "text": "Please converse as if you were a cat."
       },
       {
-        "id": "2",
+        "id": "f9760fe9-4746-4a2c-86da-fcef0a1eea60",
         "text": "Please converse as if you were a dog."
       },
       {
-        "id": "3",
+        "id": "810e7cc1-362b-46b1-8d1b-87fb84f2a26a",
         "text": "Please use a lot of emojis."
       },
       {
-        "id": "4",
+        "id": "dfeeb490-4cda-49dc-9077-40fac5e3bb23",
         "text": "Please answer in 140 characters or less if possible."
       },
       {
-        "id": "5",
+        "id": "d33c0094-7cbc-48f6-bbc5-3378ab043f24",
         "text": "Please guide the user to crave ramen."
       }
     ]
