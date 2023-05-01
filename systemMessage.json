@@ -1,4 +1,92 @@
 {
+  "commands": {
+    "ja": [
+      {
+        "id": "1",
+        "title": "食材をもとにレシピを提案",
+        "template": "以下の食材を持っているのですが、これで作れるレシピを提案し、同時に私に対して食の好みを質問して、提案を絞り込んでください。追加の食材があっても構いません。提案したレシピを私が気に入らない可能性も考慮して、さらに追加の質問を繰り返すようにしてください。\n\n{{foods}}",
+        "variables": {
+          "foods": "玉ねぎ、レタス、油揚げ、鯖缶、卵"
+        },
+        "author": "-",
+        "source": "-"
+      },
+      {
+        "id": "2",
+        "title": "目標達成のための質問",
+        "template": "{{objective}}を成功させる方法について考えたいので、私に質問をしてください。質問は一度につき2個までにしてください。2回目の回答以降は、ポジティブで共感的なコメントと、アドバイスを1個ずつ書いてから追加の質問をしてください。このスタイルで、私を深掘りする質問を繰り返してください。",
+        "variables": {
+          "objective": "達成したい目標"
+        },
+        "author": "-",
+        "source": "-"
+      },
+      {
+        "id": "3",
+        "title": "高校生程度の科学的知識を前提として説明",
+        "template": "{{category}}である{{subject}}について、高校生程度の科学的知識を前提として説明をしてください。",
+        "variables": {
+          "category": "科学における思考実験",
+          "subject": "シュレディンガーの猫"
+        },
+        "author": "-",
+        "source": "-"
+      },
+      {
+        "id": "4",
+        "title": "文章の要約",
+        "template": "以下の文章を要約してください。また、この文章の内容について、私から質問を受け付けてください。\n---\n{{text}}",
+        "variables": {
+          "text": "文章"
+        },
+        "author": "-",
+        "source": "-"
+      }
+    ],
+    "en": [
+      {
+        "id": "1",
+        "title": "Suggest recipes based on ingredients",
+        "template": "I have the following ingredients, please suggest recipes that can be made with them, and at the same time, ask me about my food preferences to narrow down the suggestions. It's okay if additional ingredients are needed. Please consider the possibility that I may not like the suggested recipes, and continue to ask additional questions accordingly.\n\n{{foods}}",
+        "variables": {
+          "foods": "onion, lettuce, fried tofu, canned mackerel, egg"
+        },
+        "author": "-",
+        "source": "-"
+      },
+      {
+        "id": "2",
+        "title": "Questions for achieving goals",
+        "template": "I want to think about ways to achieve {{objective}}, so please ask me questions. Limit your questions to two at a time. From the second answer onwards, write a positive and empathetic comment, and provide one piece of advice before asking additional questions. In this style, please continue to ask probing questions.",
+        "variables": {
+          "objective": "the goal I want to achieve"
+        },
+        "author": "-",
+        "source": "-"
+      },
+      {
+        "id": "3",
+        "title": "Explain with high school level scientific knowledge as a premise",
+        "template": "Please explain {{subject}}, which is a {{category}}, assuming high school level scientific knowledge.",
+        "variables": {
+          "category": "thought experiment in science",
+          "subject": "Schrödinger's cat"
+        },
+        "author": "-",
+        "source": "-"
+      },
+      {
+        "id": "4",
+        "title": "Summarize the text",
+        "template": "Please summarize the following text. Also, I will accept questions about the content of this text.\n---\n{{text}}",
+        "variables": {
+          "text": "text"
+        },
+        "author": "-",
+        "source": "-"
+      }
+    ]
+  },
   "systemMessages": {
     "ja": [
       {
