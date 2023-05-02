@@ -93,7 +93,7 @@
             "description": "アシスタントに箇条書きにしてもらいます。 count に希望の個数を入力してください。",
             "template": "箇条書きにして{{count}}個以内でまとめてください。",
             "variables": {
-              "count": 3
+              "count": "3"
             },
             "author": "-",
             "source": "-"
