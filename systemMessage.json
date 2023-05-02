@@ -2,109 +2,152 @@
   "commands": {
     "ja": [
       {
-        "id": "fbafb801-fa00-4559-a9f1-eb705fb7320f",
-        "title": "食材をもとにレシピを提案",
-        "template": "以下の食材を持っているのですが、これで作れるレシピを提案し、同時に私に対して食の好みを質問して、提案を絞り込んでください。追加の食材があっても構いません。提案したレシピを私が気に入らない可能性も考慮して、さらに追加の質問を繰り返すようにしてください。\n\n{{foods}}",
-        "variables": {
-          "foods": "玉ねぎ、レタス、油揚げ、鯖缶、卵"
-        },
-        "author": "-",
-        "source": "-"
+        "id": "5abf2b10-e70f-4c38-b627-34204f2cf3c4",
+        "title": "説明・質問・提案してもらう",
+        "first": true,
+        "data": [
+          {
+            "id": "fbafb801-fa00-4559-a9f1-eb705fb7320f",
+            "title": "食材をもとにレシピを提案させる",
+            "description": "アシスタントにレシピを提案させます。 foods に食材を入力してください。",
+            "template": "以下の食材を持っているのですが、これで作れるレシピを提案し、同時に私に対して食の好みを質問して、提案を絞り込んでください。追加の食材があっても構いません。提案したレシピを私が気に入らない可能性も考慮して、さらに追加の質問を繰り返すようにしてください。\n\n{{foods}}",
+            "variables": {
+              "foods": "玉ねぎ、レタス、油揚げ、鯖缶、卵"
+            },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "161cff0e-a949-4e6c-bf0e-25cdb6b1a730",
+            "title": "目標達成のための質問をさせる",
+            "description": "アシスタントに質問をさせ、目標達成までの道のりについて考えを深めます。 objective に目標を入力してください。",
+            "template": "{{objective}}を成功させる方法について考えたいので、私に質問をしてください。質問は一度につき2個までにしてください。2回目の回答以降は、ポジティブで共感的なコメントと、アドバイスを1個ずつ書いてから追加の質問をしてください。このスタイルで、私を深掘りする質問を繰り返してください。",
+            "variables": {
+              "objective": "達成したい目標"
+            },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "e6a6f247-4cfe-4207-aa71-bd3d75457a37",
+            "title": "中学生程度の知識を前提として説明してもらう",
+            "description": "どの程度の知識を前提として説明してほしいかをアシスタントに指示します。 category, subject に説明の対象を、 class に年齢層などを入力してください。",
+            "template": "{{category}}である{{subject}}について、{{class}}程度の知識を前提として説明をしてください。",
+            "variables": {
+              "category": "科学における思考実験",
+              "subject": "シュレディンガーの猫",
+              "class": "中学生"
+            },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "2e5c0d8d-cac1-4fe7-b67f-0b84e3444123",
+            "title": "プロに聞く",
+            "description": "アシスタントに専門職を演じて、仕事内容を説明させます。 profession に職業を入力してください。",
+            "template": "あなたはプロの{{profession}}です。あなたの仕事において最も重要だと考えていることを教えてください。また、仕事に対してどのような感情を持っているか語ってください。",
+            "variables": {
+              "profession": "コピーライター"
+            },
+            "author": "-",
+            "source": "-"
+          }
+        ]
       },
       {
-        "id": "161cff0e-a949-4e6c-bf0e-25cdb6b1a730",
-        "title": "目標達成のための質問",
-        "template": "{{objective}}を成功させる方法について考えたいので、私に質問をしてください。質問は一度につき2個までにしてください。2回目の回答以降は、ポジティブで共感的なコメントと、アドバイスを1個ずつ書いてから追加の質問をしてください。このスタイルで、私を深掘りする質問を繰り返してください。",
-        "variables": {
-          "objective": "達成したい目標"
-        },
-        "author": "-",
-        "source": "-"
+        "id": "da212839-3044-4642-98b5-8019ec999f7d",
+        "title": "文章を読んでもらう",
+        "first": true,
+        "data": [
+          {
+            "id": "4063b684-52b3-465d-97e2-df1c18041852",
+            "title": "文章の要約",
+            "description": "アシスタントに文章を要約させます。 text に文章を入力してください。",
+            "template": "以下の文章を要約してください。また、この文章の内容について、私から質問を受け付けてください。\n---\n{{text}}",
+            "variables": {
+              "text": ""
+            },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "7267b251-8e74-44d4-a826-32b3f8cea156",
+            "title": "文章の訂正・校正・改善",
+            "description": "アシスタントに文章を訂正・校正、および改善を提案させます。 text に文章を入力してください。",
+            "template": "あなたはプロの編集者です。以下の文章に誤字脱字がないか確認してください。また、文章をよりよく改善する提案を行ってください。\n---\n{{text}}",
+            "variables": {
+              "text": ""
+            },
+            "author": "-",
+            "source": "-"
+          }
+        ]
       },
       {
-        "id": "e6a6f247-4cfe-4207-aa71-bd3d75457a37",
-        "title": "高校生程度の科学的知識を前提として説明",
-        "template": "{{category}}である{{subject}}について、{{class}}程度の科学的知識を前提として説明をしてください。",
-        "variables": {
-          "category": "科学における思考実験",
-          "subject": "シュレディンガーの猫",
-          "class": "中学生"
-        },
-        "author": "-",
-        "source": "-"
-      },
-      {
-        "id": "4063b684-52b3-465d-97e2-df1c18041852",
-        "title": "文章の要約",
-        "template": "以下の文章を要約してください。また、この文章の内容について、私から質問を受け付けてください。\n---\n{{text}}",
-        "variables": {
-          "text": ""
-        },
-        "author": "-",
-        "source": "-"
-      },
-      {
-        "id": "7267b251-8e74-44d4-a826-32b3f8cea156",
-        "title": "文章の訂正・校正・改善",
-        "template": "あなたはプロの編集者です。以下の文章に誤字脱字がないか確認してください。また、文章をよりよく改善する提案を行ってください。\n---\n{{text}}",
-        "variables": {
-          "text": ""
-        },
-        "author": "-",
-        "source": "-"
-      },
-      {
-        "id": "2e5c0d8d-cac1-4fe7-b67f-0b84e3444123",
-        "title": "プロに聞く",
-        "template": "あなたはプロの{{profession}}です。あなたの仕事において最も重要だと考えていることを教えてください。また、仕事に対してどのような感情を持っているか語ってください。",
-        "variables": {
-          "profession": "コピーライター"
-        },
-        "author": "-",
-        "source": "-"
+        "id": "d8781778-5217-443f-891f-3eb968a55cf2",
+        "title": "条件の追加",
+        "first": false,
+        "data": [
+          {
+            "id": "5670a6f9-d5d0-4dc3-a85d-8444b281d4f9",
+            "title": "他にも教えて",
+            "description": "アシスタントに追加の条件を指示します。",
+            "template": "他にもあれば教えてください。",
+            "variables": {},
+            "author": "-",
+            "source": "-"
+          }
+        ]
       }
     ],
     "en": [
       {
-        "id": "d96b609f-4873-41e6-a46b-fcbf35c3f1e9",
-        "title": "Suggest recipes based on ingredients",
-        "template": "I have the following ingredients, please suggest recipes that can be made with them, and at the same time, ask me about my food preferences to narrow down the suggestions. It's okay if additional ingredients are needed. Please consider the possibility that I may not like the suggested recipes, and continue to ask additional questions accordingly.\n\n{{foods}}",
-        "variables": {
-          "foods": "onion, lettuce, fried tofu, canned mackerel, egg"
-        },
-        "author": "-",
-        "source": "-"
-      },
-      {
-        "id": "28405d2c-09e8-4ead-8b9e-083504ee6464",
-        "title": "Questions for achieving goals",
-        "template": "I want to think about ways to achieve {{objective}}, so please ask me questions. Limit your questions to two at a time. From the second answer onwards, write a positive and empathetic comment, and provide one piece of advice before asking additional questions. In this style, please continue to ask probing questions.",
-        "variables": {
-          "objective": "the goal I want to achieve"
-        },
-        "author": "-",
-        "source": "-"
-      },
-      {
-        "id": "490c2359-a621-4613-8419-edd78bb18bfd",
-        "title": "Explain with high school level scientific knowledge as a premise",
-        "template": "Please explain {{subject}}, which is a {{category}}, assuming high school level scientific knowledge.",
-        "variables": {
-          "category": "thought experiment in science",
-          "subject": "Schrödinger's cat"
-        },
-        "author": "-",
-        "source": "-"
-      },
-      {
-        "id": "a8fae123-1ad9-49c1-a2e2-27c94cd5b095",
-        "title": "Summarize the text",
-        "template": "Please summarize the following text. Also, I will accept questions about the content of this text.\n---\n{{text}}",
-        "variables": {
-          "text": "text"
-        },
-        "author": "-",
-        "source": "-"
+        "id": "2e9f296a-707c-4dc0-9207-5bb01401d884",
+        "title": "Ask for explanations, questions, and suggestions",
+        "first": true,
+        "data": [
+          {
+            "id": "d96b609f-4873-41e6-a46b-fcbf35c3f1e9",
+            "title": "Suggest recipes based on ingredients",
+            "template": "I have the following ingredients, please suggest recipes that can be made with them, and at the same time, ask me about my food preferences to narrow down the suggestions. It's okay if additional ingredients are needed. Please consider the possibility that I may not like the suggested recipes, and continue to ask additional questions accordingly.\n\n{{foods}}",
+            "variables": {
+              "foods": "onion, lettuce, fried tofu, canned mackerel, egg"
+            },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "28405d2c-09e8-4ead-8b9e-083504ee6464",
+            "title": "Questions for achieving goals",
+            "template": "I want to think about ways to achieve {{objective}}, so please ask me questions. Limit your questions to two at a time. From the second answer onwards, write a positive and empathetic comment, and provide one piece of advice before asking additional questions. In this style, please continue to ask probing questions.",
+            "variables": {
+              "objective": "the goal I want to achieve"
+            },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "490c2359-a621-4613-8419-edd78bb18bfd",
+            "title": "Explain with high school level scientific knowledge as a premise",
+            "template": "Please explain {{subject}}, which is a {{category}}, assuming high school level scientific knowledge.",
+            "variables": {
+              "category": "thought experiment in science",
+              "subject": "Schrödinger's cat"
+            },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "a8fae123-1ad9-49c1-a2e2-27c94cd5b095",
+            "title": "Summarize the text",
+            "template": "Please summarize the following text. Also, I will accept questions about the content of this text.\n---\n{{text}}",
+            "variables": {
+              "text": "text"
+            },
+            "author": "-",
+            "source": "-"
+          }
+        ]
       }
     ]
   },
