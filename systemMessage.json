@@ -108,7 +108,8 @@
         "data": [
           {
             "id": "d96b609f-4873-41e6-a46b-fcbf35c3f1e9",
-            "title": "Suggest recipes based on ingredients",
+            "title": "Suggest recipes based on foods",
+            "description": "Have the assistant suggest a recipe. Enter the ingredients in the foods field.",
             "template": "I have the following ingredients, please suggest recipes that can be made with them, and at the same time, ask me about my food preferences to narrow down the suggestions. It's okay if additional ingredients are needed. Please consider the possibility that I may not like the suggested recipes, and continue to ask additional questions accordingly.\n\n{{foods}}",
             "variables": {
               "foods": "onion, lettuce, fried tofu, canned mackerel, egg"
@@ -119,6 +120,7 @@
           {
             "id": "28405d2c-09e8-4ead-8b9e-083504ee6464",
             "title": "Questions for achieving goals",
+            "description": "Have the assistant ask you questions to deepen your thinking about how to reach your goal. Enter your goals in objective.",
             "template": "I want to think about ways to achieve {{objective}}, so please ask me questions. Limit your questions to two at a time. From the second answer onwards, write a positive and empathetic comment, and provide one piece of advice before asking additional questions. In this style, please continue to ask probing questions.",
             "variables": {
               "objective": "the goal I want to achieve"
@@ -128,7 +130,8 @@
           },
           {
             "id": "490c2359-a621-4613-8419-edd78bb18bfd",
-            "title": "Explain with high school level scientific knowledge as a premise",
+            "title": "Ask them to explain it to you assuming a middle school level of knowledge.",
+            "description": "Tell the assistant what level of knowledge you want the explanation to be based on. Enter the subject of the explanation in the category and subject fields, and the age group in the class field.",
             "template": "Please explain {{subject}}, which is a {{category}}, assuming high school level scientific knowledge.",
             "variables": {
               "category": "thought experiment in science",
@@ -140,6 +143,7 @@
           {
             "id": "a8fae123-1ad9-49c1-a2e2-27c94cd5b095",
             "title": "Summarize the text",
+            "description": "Have the assistant summarize the text. Enter a sentence in the text field.",
             "template": "Please summarize the following text. Also, I will accept questions about the content of this text.\n---\n{{text}}",
             "variables": {
               "text": "text"
