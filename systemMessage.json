@@ -104,6 +104,24 @@
             "source": "-"
           },
           {
+            "id": "",
+            "title": "より詳しく説明してもらう",
+            "description": "より詳しく説明するよう指示します。 objective に対象を入力してください。",
+            "template": "{{objective}}について、より詳しく具体例を交えながら説明してください。",
+            "variables": { "objective": "一つ目の問題" },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "",
+            "title": "質問してもらう",
+            "description": "考えを深めるために質問してもらいます。",
+            "template": "アイディアをより深く具体化するために、私に質問してください。",
+            "variables": {},
+            "author": "-",
+            "source": "-"
+          },
+          {
             "id": "61914b2d-d67f-4ab1-8abd-8827c463697d",
             "title": "箇条書きにしてもらう",
             "description": "アシスタントに箇条書きにしてもらいます。 count に希望の個数を入力してください。",
