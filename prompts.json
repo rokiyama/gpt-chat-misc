@@ -68,7 +68,7 @@
       },
       {
         "id": "da212839-3044-4642-98b5-8019ec999f7d",
-        "title": "文章を読んでもらう",
+        "title": "文章を読ませる",
         "first": true,
         "data": [
           {
@@ -88,6 +88,15 @@
             "variables": { "text": "" },
             "author": "-",
             "source": "-"
+          },
+          {
+            "id": "178af7a1-ca7b-456a-85b9-56b664e3ad17",
+            "title": "翻訳してもらう",
+            "description": "アシスタントに文章を翻訳してもらいます。 text に文章を入力してください。",
+            "template": "以下の文章を日本語に翻訳してください。\n---\n{{text}}",
+            "variables": { "text": "" },
+            "author": "-",
+            "source": "-"
           }
         ]
       },
@@ -96,6 +105,15 @@
         "title": "条件の追加",
         "first": false,
         "data": [
+          {
+            "id": "c61b14d9-2320-4a4f-a765-178bd39acfa4",
+            "title": "短くまとめてもらう",
+            "description": "これまでの内容を要約してもらいます。 length に目安の文字数を入力してください。",
+            "template": "ここまでの内容を要約して{{length}}文字程度でまとめてください。",
+            "variables": { "length": "200" },
+            "author": "-",
+            "source": "-"
+          },
           {
             "id": "8168a3dd-f146-4072-8c9b-243afe1c2a4f",
             "title": "中学生程度の知識を前提として説明してもらう",
