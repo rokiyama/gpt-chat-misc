@@ -206,9 +206,10 @@
             "id": "d96b609f-4873-41e6-a46b-fcbf35c3f1e9",
             "title": "Suggest recipes based on foods",
             "description": "Have the assistant suggest a recipe. Enter the ingredients in the foods field.",
-            "template": "I have the following ingredients, please suggest recipes that can be made with them, and at the same time, ask me about my food preferences to narrow down the suggestions. It's okay if additional ingredients are needed. Please consider the possibility that I may not like the suggested recipes, and continue to ask additional questions accordingly.\n\n{{foods}}",
+            "template": "I have the following ingredients, please suggest recipes that can be made with them, and at the same time, ask me about my food preferences to narrow down the suggestions. It's okay if additional ingredients are needed. Please consider the possibility that I may not like the suggested recipes, and continue to ask additional questions accordingly.\n\ningredients: {{foods}}\nother conditions: {{}}",
             "variables": {
-              "foods": "onion, lettuce, fried tofu, canned mackerel, egg"
+              "foods": "onion, lettuce, fried tofu, canned mackerel, egg",
+              "prefer": "Japanese food, low-carb diet"
             },
             "author": "-",
             "source": "-"
