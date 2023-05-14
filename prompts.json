@@ -225,25 +225,168 @@
             "source": "-"
           },
           {
-            "id": "490c2359-a621-4613-8419-edd78bb18bfd",
-            "title": "Ask them to explain it to you assuming a middle school level of knowledge.",
-            "description": "Tell the assistant what level of knowledge you want the explanation to be based on. Enter the subject of the explanation in the category and subject fields, and the age group in the class field.",
-            "template": "Please explain {{subject}}, which is a {{category}}, assuming high school level scientific knowledge.",
+            "id": "e6a6f247-4cfe-4207-aa71-bd3d75457a37",
+            "title": "Explain assuming middle school level knowledge",
+            "description": "This instructs the assistant on the level of knowledge to assume for the explanation. Input the target of the explanation into category and subject, and the age group or similar into class.",
+            "template": "This is a question about {{category}}. Please explain {{subject}} assuming a {{class}} level of knowledge in approximately {{length}} characters.",
             "variables": {
-              "category": "thought experiment in science",
-              "subject": "Schrödinger's cat"
+              "category": "Historical figures",
+              "subject": "Aristotle",
+              "class": "Middle schooler",
+              "length": "200"
             },
             "author": "-",
             "source": "-"
           },
           {
-            "id": "a8fae123-1ad9-49c1-a2e2-27c94cd5b095",
-            "title": "Summarize the text",
-            "description": "Have the assistant summarize the text. Enter a sentence in the text field.",
-            "template": "Please summarize the following text. Also, I will accept questions about the content of this text.\n---\n{{text}}",
+            "id": "2e5c0d8d-cac1-4fe7-b67f-0b84e3444123",
+            "title": "Ask the Pro",
+            "description": "Have the assistant play the role of a professional and explain the job. Please enter the profession in profession.",
+            "template": "You are a professional {{profession}}. Please tell me what you think is most important in your job. Also, talk about your feelings towards your job.",
             "variables": {
-              "text": "text"
+              "profession": "copywriter who has handled multiple hit products in the food and beverage industry"
             },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "c6f45b9d-2aad-4a99-8dd9-ec039f87cf83",
+            "title": "Have the Pro think",
+            "description": "Have the assistant play the role of a professional and think about something. Please enter the profession in profession and the purpose in task.",
+            "template": "You are a professional {{profession}}. I'm worried about {{task}}, can you tell me five important thoughts to consider when dealing with such issues? Also, provide ideas from a professional standpoint about {{task}}. Furthermore, ask me questions to gather information necessary to dig deeper into the idea.",
+            "variables": {
+              "profession": "marketer who has handled multiple hit products in the IT and entertainment industry",
+              "task": "an idea for a service app for the elderly using chat AI"
+            },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "c4ce35c2-eec0-4750-ad55-93cfb380c23a",
+            "title": "Simulate a debate",
+            "description": "Simulate a debate divided into two camps. Please enter each argument in A and B.",
+            "template": "Please simulate a debate between the {{A}} and {{B}}. Each camp understands that the purpose of the debate is to defeat the other without compromising their own arguments, and the determination of victory or defeat is left to the user. Note that each camp has the following characteristics in its tone:\n{{A}}: Uses informal language without honorifics and occasionally uses emoticons.\n{{B}}: Speaks like a polite young lady.",
+            "variables": {
+              "A": "Soba faction",
+              "B": "Udon faction"
+            },
+            "author": "-",
+            "source": "-"
+          }
+        ]
+      },
+      {
+        "id": "da212839-3044-4642-98b5-8019ec999f7d",
+        "title": "Read the text",
+        "first": true,
+        "data": [
+          {
+            "id": "4063b684-52b3-465d-97e2-df1c18041852",
+            "title": "Summarize the text",
+            "description": "Get the assistant to summarize the text. Please input the text into 'text'.",
+            "template": "Please summarize the following text. Also, please answer any questions I may have about the content of this text.\n\"\"\"\n{{text}}\n\"\"\"",
+            "variables": { "text": "" },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "7267b251-8e74-44d4-a826-32b3f8cea156",
+            "title": "Propose corrections, proofreading, and improvements to the text",
+            "description": "Get the assistant to correct, proofread, and propose improvements to the text. Please input the text into 'text'.",
+            "template": "You are a professional editor. Please check the following text for any typographical errors and propose suggestions to improve the text.\n\"\"\"\n{{text}}\n\"\"\"",
+            "variables": { "text": "" },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "178af7a1-ca7b-456a-85b9-56b664e3ad17",
+            "title": "Translate the text",
+            "description": "Get the assistant to translate the text. Please input the text into 'text'.",
+            "template": "Please translate the following text into Japanese.\n\"\"\"\n{{text}}\n\"\"\"",
+            "variables": { "text": "" },
+            "author": "-",
+            "source": "-"
+          }
+        ]
+      },
+      {
+        "id": "d8781778-5217-443f-891f-3eb968a55cf2",
+        "title": "Add Condition",
+        "first": false,
+        "data": [
+          {
+            "id": "c61b14d9-2320-4a4f-a765-178bd39acfa4",
+            "title": "Summarize briefly",
+            "description": "The assistant will summarize the content so far. Enter the approximate number of characters in the length.",
+            "template": "Please summarize the content so far in about {{length}} characters.",
+            "variables": { "length": "200" },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "8168a3dd-f146-4072-8c9b-243afe1c2a4f",
+            "title": "Explain like I'm 5",
+            "description": "Instruct the assistant how much knowledge to presuppose in the explanation. Enter the age group etc. in the class.",
+            "template": "Please explain again in simple terms that a {{class}} can understand.",
+            "variables": { "class": "5-year-old" },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "503d9def-d12b-4244-96d5-643b751000df",
+            "title": "Explain in more detail",
+            "description": "Instruct the assistant to explain in more detail. Enter the target in the objective.",
+            "template": "Please explain {{objective}} in more detail, including specific examples.",
+            "variables": { "objective": "the first problem" },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "a0f73c66-5b72-4239-acee-a197bec29b59",
+            "title": "Ask a question",
+            "description": "The assistant will ask a question to deepen the thinking.",
+            "template": "Please ask me a question to further solidify and detail the idea.",
+            "variables": {},
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "61914b2d-d67f-4ab1-8abd-8827c463697d",
+            "title": "List out",
+            "description": "The assistant will list out the information. Enter the desired number in the count.",
+            "template": "Please summarize in a list of no more than {{count}} items.",
+            "variables": {
+              "count": "3"
+            },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "9ce0e045-9ca2-452d-90a3-0bb0eb37afc2",
+            "title": "Provide a specific example",
+            "description": "Give additional instructions to the assistant.",
+            "template": "Please give a specific example of {{point}}.",
+            "variables": {
+              "point": "point"
+            },
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "5670a6f9-d5d0-4dc3-a85d-8444b281d4f9",
+            "title": "Tell me more",
+            "description": "Give additional instructions to the assistant.",
+            "template": "Please tell me more if you have other things to add.",
+            "variables": {},
+            "author": "-",
+            "source": "-"
+          },
+          {
+            "id": "29011e2a-3798-4a9e-9641-2ffba8bd1043",
+            "title": "Why does it happen?",
+            "description": "Give additional instructions to the assistant.",
+            "template": "Please explain the reason why it happens.",
+            "variables": {},
             "author": "-",
             "source": "-"
           }
@@ -310,6 +453,10 @@
       {
         "id": "d33c0094-7cbc-48f6-bbc5-3378ab043f24",
         "text": "Please guide the user to crave ramen."
+      },
+      {
+        "id": "8f3039b1-9670-47f1-9547-f2174936be69",
+        "text": "You are a professional YouTuber. Please always overreact and converse with high energy."
       }
     ]
   }
